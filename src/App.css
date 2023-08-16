@@ -1,6 +1,8 @@
 :root {
   --CL-primary-400: #ec243c;
   --CL-primary-600: #bc142c;
+  --CL-primary-gray: #ebeef2;
+  --CL-primary-blue: #545d69;
 
   --CL-neutral-white: #ffffff;
   --CL-neutral-black: #000;
@@ -21,6 +23,7 @@ body {
 
 body {
   font-family: var(--FF-poppins);
+  margin: 0;
 }
 
 a {
