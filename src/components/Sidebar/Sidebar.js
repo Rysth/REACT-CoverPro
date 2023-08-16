@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../../assets/images/logo.svg';
 import './Sidebar.css';
@@ -37,6 +38,22 @@ const sidebarContent = [
 const Sidebar = () => {
   const project = 'CoverPro';
 
+  const [items, setItems] = useState(sidebarContent);
+  const [link, setLink] = useState('');
+
+  useEffect(() => {
+    setItems((prevItems) => {
+      const newItems = prevItems.map((item) => {
+        if (item.ID === link) {
+          return { ...item, isActive: true }; // Activate the selected item
+        }
+
+        return { ...item, isActive: false };
+      });
+      return newItems;
+    });
+  }, [link]);
+
   return (
     <div className="sidebar">
       <div className="sidebar-container">
@@ -48,13 +65,15 @@ const Sidebar = () => {
           <h2 className="sidebar-subtitle">Inbox</h2>
           <nav className="sidebar-nav">
             <ul className="sidebar-list">
-              {sidebarContent.map((item) => (
+              {items.map((item) => (
                 <SidebarItem
                   key={item.ID}
+                  ID={item.ID}
                   path={item.path}
                   active={item.isActive}
                   icon={item.icon}
                   text={item.text}
+                  setLink={setLink}
                 />
               ))}
             </ul>
@@ -66,46 +85,31 @@ const Sidebar = () => {
 };
 
 /* eslint-disable */
-const SidebarItem = ({ path, active, icon, text }) => {
+const SidebarItem = ({ ID, path, active, icon, text, setLink }) => {
   /* eslint-enable */
   const iconClassName = `sidebar-icon fa-solid fa-${icon}`;
-  const [status, setStatus] = useState(active);
-  const [itemClass, setItemClass] = useState('sidebar-item ');
 
-  useEffect(() => {
-    if (status) {
-      setItemClass((actualClass) => {
-        if (actualClass.includes('active')) {
-          return actualClass.replace('active', 'active');
-        }
-
-        return actualClass.concat('active');
-      });
-    } else {
-      setItemClass((actualClass) => actualClass.replace('active', ''));
-    }
-  }, [status]);
-
-  const handleStatus = (e) => {
-    e.preventDefault();
-    setStatus((status) => !status);
+  const handleStatus = () => {
+    setLink(ID);
   };
 
   return (
-    <li className={itemClass}>
-      <a href={path} onClick={handleStatus} className="sidebar-link">
+    <li className={`sidebar-item ${active ? 'active' : ''}`}>
+      <Link to={path} onClick={handleStatus} className="sidebar-link">
         <i className={iconClassName} />
         <span className="sidebar-text">{text}</span>
-      </a>
+      </Link>
     </li>
   );
 };
 
 SidebarItem.propTypes = {
+  ID: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  setLink: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
