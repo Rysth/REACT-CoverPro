@@ -1,0 +1,58 @@
+:root {
+  --CL-primary-400: #ec243c;
+  --CL-primary-600: #bc142c;
+
+  --CL-neutral-white: #ffffff;
+  --CL-neutral-black: #000;
+
+  --FF-poppins: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--FF-poppins);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+label,
+button,
+textarea {
+  font-family: var(--FF-poppins);
+}
+
+/* Background Colors */
+
+.bg-primary-400 {
+  background-color: var(--CL-primary-400);
+}
+
+.bg-primary-600 {
+  background-color: var(--CL-primary-600);
+}
+
+/* Containers */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Text */
+
+.text-center {
+  text-align: center;
+}
