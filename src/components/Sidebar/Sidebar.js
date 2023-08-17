@@ -40,30 +40,48 @@ const Sidebar = () => {
 
   const [items, setItems] = useState(sidebarContent);
   const [link, setLink] = useState('');
+  const [open, setOpen] = useState(true);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
-    setItems((prevItems) => {
-      const newItems = prevItems.map((item) => {
-        if (item.ID === link) {
-          return { ...item, isActive: true }; // Activate the selected item
-        }
+    if (link !== '') {
+      setItems((prevItems) => {
+        const newItems = prevItems.map((item) => {
+          if (item.ID === link) {
+            return { ...item, isActive: true }; // Activate the selected item
+          }
 
-        return { ...item, isActive: false };
+          return { ...item, isActive: false };
+        });
+        return newItems;
       });
-      return newItems;
-    });
+    }
   }, [link]);
 
+  const handleSideBar = () => {
+    setOpen((open) => !open);
+  };
+
+  const handleMobileBar = () => {
+    setMobile((mobile) => !mobile);
+  };
+
   return (
-    <div className="sidebar">
+    <div className={open ? 'sidebar' : 'sidebar min'}>
       <div className="sidebar-container">
         <header className="sidebar-header">
-          <img src={Logo} alt="" />
+          <img className="sidebar-logo" src={Logo} alt="" />
           <h1 className="sidebar-title">{project}</h1>
+          <button className="sidebar-button hidden" type="button" onClick={handleSideBar}>
+            <i className={open ? 'fa-solid fa-arrow-left' : 'fa-solid fa-bars'} />
+          </button>
         </header>
-        <div className="sidebar-content">
+        <button className="sidebar-button mobile" type="button" onClick={handleMobileBar}>
+          <i className={mobile ? 'fa-solid fa-x' : 'fa-solid fa-bars'} />
+        </button>
+        <div className={mobile ? 'sidebar-content mobile' : 'sidebar-content mobile hidden'}>
           <h2 className="sidebar-subtitle">Inbox</h2>
-          <nav className="sidebar-nav">
+          <nav className="sidebar-nav ">
             <ul className="sidebar-list">
               {items.map((item) => (
                 <SidebarItem
@@ -74,6 +92,7 @@ const Sidebar = () => {
                   icon={item.icon}
                   text={item.text}
                   setLink={setLink}
+                  setMobile={setMobile}
                 />
               ))}
             </ul>
@@ -85,12 +104,13 @@ const Sidebar = () => {
 };
 
 /* eslint-disable */
-const SidebarItem = ({ ID, path, active, icon, text, setLink }) => {
+const SidebarItem = ({ ID, path, active, icon, text, setLink, setMobile }) => {
   /* eslint-enable */
   const iconClassName = `sidebar-icon fa-solid fa-${icon}`;
 
   const handleStatus = () => {
     setLink(ID);
+    setMobile((mobile) => !mobile);
   };
 
   return (
@@ -110,6 +130,7 @@ SidebarItem.propTypes = {
   icon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   setLink: PropTypes.func.isRequired,
+  setMobile: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

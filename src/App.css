@@ -62,5 +62,16 @@ textarea {
 
 /* Content */
 .content {
-  margin-left: 280px;
+  padding: 2em;
+}
+
+@media (min-width: 768px) {
+  .App {
+    display: flex;
+    justify-content: left;
+  }
+
+  .content {
+    padding: 3em;
+  }
 }
