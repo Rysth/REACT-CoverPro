@@ -1,4 +1,4 @@
 .chart {
-  box-shadow: 0 5px 5px var(--CL-neutral-light);
+  box-shadow: 0 0 5px 3px var(--CL-neutral-light);
   border-radius: 0.5em;
 }

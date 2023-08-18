@@ -1,12 +1,13 @@
 .card {
-  box-shadow: 0 5px 5px var(--CL-neutral-light);
+  box-shadow: 0 0 5px 3px var(--CL-neutral-light);
   height: 80px;
-  width: max-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
   cursor: pointer;
+  padding: 0 0 0 1em;
+  width: 12em;
   border-radius: 0.5em;
   transition: transform 0.15s ease-in-out;
 }
@@ -43,8 +44,9 @@
 
 @media (min-width: 768px) {
   .card {
-    height: 105px;
-    width: 288px;
+    height: 80px;
+    width: 250px;
+    padding: 0 1em;
   }
 
   .card:hover {
