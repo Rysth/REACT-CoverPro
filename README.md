@@ -15,6 +15,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [Future Features](#future-features)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Commands](#commands)
@@ -27,9 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 REACT PROJECT NAME <a name="about-project"></a>
+# 📖 REACT CoverPro <a name="about-project"></a>
 
-- **REACT PROJECT NAME** ...
+- **REACT CoverPro** is a CRM Dashboard application for a University Project called CoverPro where users can take a look at an incredible good-looking design. Build with HTML, CSS, JavaScript, and React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,17 +43,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Excellent Design based on a Figma Community Design.
+- Use of [React Router](https://reactrouter.com/en/main) for the Navigation.
+- Added a Chart component provided by [Apexcharts](https://apexcharts.com/).
 
 ### Future Features <a name="future-features"></a>
 
-- Future Feature 1
-- Future Feature 2
-- Future Feature 3
+- Use a Database to support this project.
+- Add the remaining pages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🚀 Live Demo <a name="Live Demo"></a>
+
+- [Live Demo](https://react-coverpro.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -63,8 +67,8 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Template.git
-cd REACT-Template
+git clone https://github.com/Rysth/REACT-CoverPro.git
+cd REACT-CoverPro
 code . (To open VS Code Editor)
 ```
 
@@ -125,6 +129,8 @@ as well.
 
 I would like to thank the Microverse Team for reviewing my code and making me a better
 professional.
+
+Also, I would like to special thanks to [NimiMartins](https://www.figma.com/community/file/1009127355864357944) for the Figma Template provided.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
