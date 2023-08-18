@@ -3,6 +3,7 @@ import Header from '../../Header/Header';
 import Card from '../../Card/Card';
 import Chart from '../../Chart/Chart';
 import Leaderboard from '../../Leaderboard/Leaderboard';
+import Overview from '../../Overview/Overview';
 import './Dashboard.css';
 
 const cardArray = [
@@ -38,6 +39,7 @@ function Dashboard() {
       <div className="grid-system">
         <Chart />
         <Leaderboard />
+        <Overview />
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 .leaderboard {
-  box-shadow: 0 5px 5px var(--CL-neutral-light);
+  box-shadow: 0 0 5px 3px var(--CL-neutral-light);
   padding: 1em;
   border-radius: 1em;
-  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
 }
 
 .leaderboard-header {
@@ -71,9 +72,15 @@
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .leaderboard {
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 768px) {
   .leaderboard {
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
   }
 }

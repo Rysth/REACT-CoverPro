@@ -1,7 +1,7 @@
 /* Sidebar */
 .sidebar {
   width: 230px;
-  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.025);
+  box-shadow: 0 0 5px 3px var(--CL-neutral-light);
   padding: 2em 0;
   transition: width 0.2s ease-in-out;
   will-change: width;
