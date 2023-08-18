@@ -56,6 +56,8 @@
 
 ### 🚀 Live Demo <a name="Live Demo"></a>
 
+![image](https://github.com/Rysth/REACT-CoverPro/assets/115722896/4a10f7df-951e-4774-8eb7-46baee68fe54)
+
 - [Live Demo](https://react-coverpro.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
