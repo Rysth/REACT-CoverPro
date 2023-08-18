@@ -69,6 +69,7 @@ button {
 /* Content */
 .content {
   padding: 2em;
+  max-width: 1400px;
 }
 
 @media (min-width: 768px) {
@@ -80,5 +81,11 @@ button {
 
   .content {
     padding: 3em;
+  }
+
+  .grid-system {
+    display: grid;
+    grid-template-columns: 1fr 298px;
+    gap: 1em;
   }
 }
