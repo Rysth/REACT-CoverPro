@@ -1,10 +1,12 @@
 :root {
   --CL-primary-400: #ec243c;
   --CL-primary-600: #bc142c;
-
-  --CL-neutral-white: #ffffff;
+  --CL-primary-gray: #ebeef2;
+  --CL-primary-gray-two: #6d7580;
+  --CL-primary-blue: #545d69;
+  --CL-primary-blue-two: #2b3a4b;
+  --CL-neutral-white: #fff;
   --CL-neutral-black: #000;
-
   --FF-poppins: 'Poppins', sans-serif;
 }
 
@@ -21,6 +23,7 @@ body {
 
 body {
   font-family: var(--FF-poppins);
+  margin: 0;
 }
 
 a {
@@ -32,6 +35,10 @@ label,
 button,
 textarea {
   font-family: var(--FF-poppins);
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Background Colors */
@@ -55,4 +62,21 @@ textarea {
 
 .text-center {
   text-align: center;
+}
+
+/* Content */
+.content {
+  padding: 2em;
+}
+
+@media (min-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: left;
+  }
+
+  .content {
+    padding: 3em;
+  }
 }

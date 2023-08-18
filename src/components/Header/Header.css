@@ -1,0 +1,53 @@
+.header-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25em;
+  width: 100%;
+}
+
+.header-image {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 100rem;
+}
+
+.header-button {
+  background: none;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  color: var(--CL-primary-400);
+}
+
+.header-title {
+  font-size: 1.25rem;
+  color: var(--CL-primary-gray-two);
+}
+
+.header-username {
+  color: var(--CL-primary-blue-two);
+  margin: 0 0.25rem;
+}
+
+.header-text {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--CL-primary-gray-two);
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 2.5rem;
+    color: var(--CL-primary-gray-two);
+  }
+
+  .header-username {
+    margin: 0 0.5rem;
+  }
+
+  .header-text {
+    font-size: 1.225rem;
+  }
+}
