@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Header/Header';
 import Card from '../../Card/Card';
 import Chart from '../../Chart/Chart';
+import Leaderboard from '../../Leaderboard/Leaderboard';
 import './Dashboard.css';
 
 const cardArray = [
@@ -36,6 +37,7 @@ function Dashboard() {
       </div>
       <div className="grid-system">
         <Chart />
+        <Leaderboard />
       </div>
     </div>
   );
