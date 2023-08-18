@@ -6,17 +6,19 @@ import Dashboard from './components/Pages/Dashboard/Dashboard';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Sidebar />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/pendientes" element={<Dashboard />} />
-            <Route path="/asignados" element={<Dashboard />} />
-            <Route path="/cerrados" element={<Dashboard />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <Sidebar />
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/pendientes" element={<Dashboard />} />
+              <Route path="/asignados" element={<Dashboard />} />
+              <Route path="/cerrados" element={<Dashboard />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
