@@ -13,7 +13,7 @@ const cardArray = [
   {
     ID: 'card-2',
     icon: 'user',
-    title: 'Pendiente',
+    title: 'Asignados',
     number: 450,
   },
   {
