@@ -193,8 +193,9 @@
     display: block;
   }
 
+  .sidebar.min .sidebar-title,
   .sidebar-title {
-    display: none;
+    display: block;
   }
 
   .sidebar-content {
