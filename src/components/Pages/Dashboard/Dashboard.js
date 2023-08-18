@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../Header/Header';
 import Card from '../../Card/Card';
+import Chart from '../../Chart/Chart';
 import './Dashboard.css';
 
 const cardArray = [
@@ -32,6 +33,9 @@ function Dashboard() {
         {cardArray.map((card) => (
           <Card key={card.ID} icon={card.icon} title={card.title} number={card.number} />
         ))}
+      </div>
+      <div className="grid-system">
+        <Chart />
       </div>
     </div>
   );
