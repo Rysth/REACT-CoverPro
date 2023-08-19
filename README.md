@@ -54,7 +54,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 🚀 Live Demo <a name="Live Demo"></a>
+### 🚀 Live Demo <a name="live-demo"></a>
+
+![image](https://github.com/Rysth/REACT-CoverPro/assets/115722896/4a10f7df-951e-4774-8eb7-46baee68fe54)
 
 - [Live Demo](https://react-coverpro.onrender.com/)
 
