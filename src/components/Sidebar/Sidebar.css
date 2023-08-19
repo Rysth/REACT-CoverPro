@@ -26,7 +26,8 @@
   cursor: pointer;
   font-size: 1.75rem;
   display: grid;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   color: var(--CL-neutral-white);
   right: -1.35em;
   z-index: 100;
